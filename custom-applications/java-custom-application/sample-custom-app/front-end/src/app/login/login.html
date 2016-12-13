@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-sm-3">
+        <img ng-src="{{vm.barcodeImage}}"
+             src="../../images/ajax-loader.gif"/>
+    </div>
+
+    <form name="form"
+          ng-submit="vm.login()"
+          class="col-sm-offset-3 col-sm-6"
+          novalidate>
+
+        <div class="row">
+            <label class="control-label col-sm-12">
+                Username *
+                <input ng-model="vm.request.username"
+                       required/>
+            </label>
+        </div>
+
+        <div class="row">
+            <label class="control-label col-sm-12">
+                OTP *
+                <input ng-model="vm.request.otp"
+                       type="password"
+                       maxlength="6"
+                       required/>
+            </label>
+        </div>
+
+        <button type="submit"
+                class="btn btn-lg btn-warning"
+                ng-disabled="form.$invalid">
+            Login
+        </button>
+    </form>
+
+    <iframe ng-src="{{vm.bluetoothCode}}"
+            ng-show="false"></iframe>
+</div>

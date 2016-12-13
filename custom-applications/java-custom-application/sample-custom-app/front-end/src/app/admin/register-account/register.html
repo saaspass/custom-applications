@@ -1,0 +1,38 @@
+<div class="register row">
+
+    <form name="form"
+          ng-submit="vm.register()"
+          class="col-sm-6"
+          novalidate>
+
+        <div>
+            <label>
+                Username *
+                <input ng-model="vm.request.username"
+                       required/>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Saaspass Id
+                <input ng-model="vm.request.accountowner"/>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Is AD account?
+                <input ng-model="vm.request.isadaccount"
+                       type="checkbox"/>
+            </label>
+        </div>
+
+        <button type="submit"
+                class="btn btn-lg btn-warning"
+                ng-disabled="form.$invalid">
+            Register Account
+        </button>
+
+    </form>
+</div>

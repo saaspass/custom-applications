@@ -1,0 +1,26 @@
+{{vm.getUsername()}}
+<button ng-click="vm.logout()">Log out</button>
+<button ng-click="vm.unregister()">Unregister</button>
+<button ng-click="vm.removeAccount()">Remove Account</button>
+
+<hr/>
+
+<ul class="nav nav-tabs">
+    <li ui-sref-active="active">
+        <a ui-sref="app.admin.register">
+            Register Account
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.admin.addaccount">
+            Add Account
+        </a>
+    </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.admin.verifyaccount">
+            Verify Account
+        </a>
+    </li>
+</ul>
+
+<div ui-view></div>

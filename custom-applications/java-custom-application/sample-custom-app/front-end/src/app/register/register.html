@@ -1,0 +1,64 @@
+<div class="register row">
+
+    <div class="col-sm-3">
+        <img ng-src="{{vm.barcode}}"
+             src="../../images/ajax-loader.gif"/>
+        <button class="btn"
+                ng-if="vm.ilir"
+                ng-click="vm.ilir = false; vm.refreshBarcode()">
+            Register & Login
+        </button>
+        <button class="btn"
+                ng-if="!vm.ilir"
+                ng-click="vm.ilir = true; vm.refreshBarcode()">
+            Register
+        </button>
+    </div>
+
+    <form name="form"
+          ng-submit="vm.register()"
+          class="col-sm-offset-3 col-sm-6"
+          novalidate>
+
+        <div>
+            <label>
+                Username *
+                <input ng-model="vm.request.username"
+                       required/>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Saaspass Id *
+                <input ng-model="vm.request.saaspassid"
+                       required/>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                OTP *
+                <input ng-model="vm.request.otp"
+                       type="password"
+                       maxlength="6"
+                       required/>
+            </label>
+        </div>
+
+        <div>
+            <label>
+                Is AD account?
+                <input ng-model="vm.request.isadaccount"
+                       type="checkbox"/>
+            </label>
+        </div>
+
+        <button type="submit"
+                class="btn btn-lg btn-warning"
+                ng-disabled="form.$invalid">
+            Register
+        </button>
+
+    </form>
+</div>

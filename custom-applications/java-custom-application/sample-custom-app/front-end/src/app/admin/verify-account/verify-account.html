@@ -1,0 +1,33 @@
+<form name="form"
+      ng-submit="vm.verifyAccount()"
+      novalidate>
+
+    <div>
+        <label>
+            Username *
+            <input ng-model="vm.request.username"
+                   required/>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Saaspass Id
+            <input ng-model="vm.request.accountowner"/>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Is AD account?
+            <input ng-model="vm.request.isadaccount"
+                   type="checkbox"/>
+        </label>
+    </div>
+
+    <button type="submit"
+            class="btn btn-lg btn-primary"
+            ng-disabled="form.$invalid">
+        Verify Account
+    </button>
+</form>

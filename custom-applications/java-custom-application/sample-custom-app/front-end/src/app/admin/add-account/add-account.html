@@ -1,0 +1,32 @@
+<form name="form"
+      ng-submit="vm.addAccount()"
+      novalidate>
+
+    <div>
+        <label>
+            Username *
+            <input ng-model="vm.request.username"
+                   required/>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Saaspass Id
+            <input ng-model="vm.request.accountowner"/>
+        </label>
+    </div>
+
+    <div>
+        <label>
+            Group List
+            <input ng-model="vm.request.grouplist"/>
+        </label>
+    </div>
+
+    <button type="submit"
+            class="btn btn-lg btn-primary"
+            ng-disabled="form.$invalid">
+        Add Account
+    </button>
+</form>
